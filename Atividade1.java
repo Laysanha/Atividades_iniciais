@@ -1,27 +1,17 @@
-package aula2;
+package primeiro_projeto;
 
 import javax.swing.JOptionPane;
 
 public class Atividade1 {
 	public static void main(String[] args) {
-		int mes = Integer.parseInt(
-				JOptionPane.showInputDialog("Informe um número de 1 a 12:"));
+		String nome = JOptionPane.showInputDialog("Nome do aluno:");
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Nota 1 do aluno(a) " + nome + ": ")); 
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Nota 2 do aluno(a) " + nome + ": "));
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("Nota 3 do aluno(a) " + nome + ": "));
 		
-		if (mes < 1 || mes > 12) {
-			JOptionPane.showMessageDialog(null, "Inválido");
-		} else {
-			if (mes == 1 ) {
-				JOptionPane.showMessageDialog(null, "Janeiro");
-			}
-			if (mes == 2 ) {
-				JOptionPane.showMessageDialog(null, "Fevereiro");
-			}
-			if (mes == 3 ) {
-				JOptionPane.showMessageDialog(null, "Março");
-			}
-			if (mes == 4 ) {
-				JOptionPane.showMessageDialog(null, "Abril");
-			}
-		}
+		double media = (nota1 + nota2 + nota3)/3;
+		
+		JOptionPane.showMessageDialog(null, nome + " Sua média é :" + media);
 	}
 }
+
